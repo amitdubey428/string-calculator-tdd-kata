@@ -20,8 +20,8 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(1,result)
 
     def test_addition_not_a_number(self):
-        self.assertRaises(ValueError,calc.Add,"a")
-
+        result = calc.Add("a")
+        self.assertEqual("Oops not a number!",result)
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
