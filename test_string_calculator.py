@@ -1,5 +1,7 @@
 import unittest
 
+from string_calculator import StringCalculator
+
 class TestStringCalculator(unittest.TestCase):
 
     def test_empty_addition(self):
