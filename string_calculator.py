@@ -1,10 +1,12 @@
 class StringCalculator(object):
-    def Add(self,x):
+    def Add(self,numbers):
         try:
-            x = x.strip()
-            if len(x) != 0:
-                return int(x)
-            return len(x)
+            numbers = numbers.strip()
+            if len(numbers) != 0:
+                numbers = numbers.split(",")
+                int_list = list(map(int,numbers))
+                return sum(int_list)
+            return len(numbers)
         except ValueError:
             return("Oops not a number!")
             
