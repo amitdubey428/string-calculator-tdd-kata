@@ -31,6 +31,10 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add("1,a")
         self.assertEqual("Oops not a number!",result)
 
+    def test_addition_with_white_space(self):
+        result = calc.Add("2 , 4 ")
+        self.assertEqual(2+4,result)
+
     #Test Case for just 1st instruction as it states "upto 2 numbers"
     def test_addition_max_two_numbers(self):
         result = calc.Add("1,2,3")
