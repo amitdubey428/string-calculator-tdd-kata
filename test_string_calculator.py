@@ -18,7 +18,11 @@ class TestStringCalculator(unittest.TestCase):
     def test_addition_one_number(self):
         result = calc.Add("1")
         self.assertEqual(1,result)
-        
+
+    def test_addition_not_a_number(self):
+        result = calc.Add("a")
+        self.assertRaises(ValueError,result)
+
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
