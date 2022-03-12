@@ -26,6 +26,10 @@ class TestStringCalculator(unittest.TestCase):
     def test_addition_two_numbers(self):
         result = calc.Add("3,6")
         self.assertEqual(3+6,result)
+    
+    def test_addition_two_containing_alphabet(self):
+        result = calc.Add("1,a")
+        self.assertEqual("Oops not a number!",result)
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
