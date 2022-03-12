@@ -9,6 +9,11 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add("")
         self.assertEqual(0,result)
 
+    def test_white_space_addition(self):
+        calc = StringCalculator()
+        result = calc.Add(" ")
+        self.assertEqual(0,result)
+
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
