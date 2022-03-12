@@ -2,7 +2,16 @@
 
 Taking steps into the world of TDD
 
-_We will keep updating this as we move forward_
+##### _We will keep updating this as we move forward_
+<br/>
+
+#### We are using nosetests to execute the testcases, basic syntax:
+```
+nosetests <test_file>.py --rednose
+``` 
+_--rednose is just to add some colors to the results_
+
+<br/>
 
 ## Tasks
 
