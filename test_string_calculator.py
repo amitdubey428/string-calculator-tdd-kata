@@ -34,6 +34,14 @@ class TestStringCalculator(unittest.TestCase):
     def test_addition_with_white_space(self):
         result = calc.Add("2 , 4 ")
         self.assertEqual(2+4,result)
+    
+    def test_addition_with_empty_commas(self):
+        result = calc.Add(" , ")
+        self.assertEqual(0,result)
+
+    def test_addition_with_one_empty_commas(self):
+        result = calc.Add(" 2, ")
+        self.assertEqual(2,result)
 
     #Test Case for just 1st instruction as it states "upto 2 numbers"
     def test_addition_max_two_numbers(self):
