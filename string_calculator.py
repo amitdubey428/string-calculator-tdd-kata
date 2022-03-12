@@ -5,7 +5,9 @@ class StringCalculator(object):
             if len(numbers) != 0:
                 numbers = numbers.split(",")
                 int_list = list(map(int,numbers))
-                return sum(int_list)
+                if len(int_list) <=2:
+                    return sum(int_list)
+                return("Oops you can add only two numbers!")
             return len(numbers)
         except ValueError:
             return("Oops not a number!")
