@@ -48,9 +48,13 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(3+5,result)
 
     #Test Case for just 1st instruction as it states "upto 2 numbers"
+    # def test_addition_max_two_numbers(self):
+    #     result = calc.Add("1,2,3")
+    #     self.assertEqual("Oops you can add only two numbers!",result)
+
     def test_addition_max_two_numbers(self):
-        result = calc.Add("1,2,3")
-        self.assertEqual("Oops you can add only two numbers!",result)
+        result = calc.Add("4,7,2, 6")
+        self.assertEqual("4+7+2+6",result)
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
