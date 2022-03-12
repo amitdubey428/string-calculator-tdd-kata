@@ -54,7 +54,7 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_addition_max_two_numbers(self):
         result = calc.Add("4,7,2, 6")
-        self.assertEqual("4+7+2+6",result)
+        self.assertEqual(4+7+2+6,result)
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
