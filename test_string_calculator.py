@@ -47,7 +47,7 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add(" 3 , 5 ")
         self.assertEqual(3+5,result)
 
-    #Test Case for just 1st instruction as it states "upto 2 numbers"
+    # Test Case for just 1st instruction as it states "upto 2 numbers"
     # def test_addition_max_two_numbers(self):
     #     result = calc.Add("1,2,3")
     #     self.assertEqual("Oops you can add only two numbers!",result)
