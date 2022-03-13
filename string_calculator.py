@@ -11,7 +11,7 @@ class StringCalculator(object):
                 numbers = numbers[3:]
             delimiter_regex = [default_delimiter+"\n"]
             numbers = re.split(str(delimiter_regex),numbers)
-            numbers[:] = [x if x != "" else 0 for x in numbers]
+            numbers[:] = [x if x != "" else 0 for x in numbers] # Changes value of null strings to 0
             int_list = list(map(int,numbers))
             return sum(int_list)
         except ValueError:
