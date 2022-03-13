@@ -3,9 +3,14 @@ import re
 
 class StringCalculator(object):
     def Add(self,numbers):
+        default_delimiter = ','
         try:
             numbers = numbers.strip()
-            numbers = re.split('[, \n]',numbers)
+            if "//" in numbers and numbers.index("//") == 0:
+                default_delimiter = str(numbers[2])
+                numbers = numbers[3:]
+            delimiter_regex = [default_delimiter+"\n"]
+            numbers = re.split(str(delimiter_regex),numbers)
             numbers[:] = [x if x != "" else 0 for x in numbers]
             int_list = list(map(int,numbers))
             return sum(int_list)
