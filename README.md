@@ -31,4 +31,3 @@ _--rednose is just to add some colors to the results_
 
     The following input is ok: ```"1\n2,3"``` (will equal 6)
     
-    The following input is NOT ok: ```"1,\n"``` (not need to prove it - just clarifying)
