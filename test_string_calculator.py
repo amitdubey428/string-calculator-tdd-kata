@@ -1,4 +1,5 @@
 import unittest
+from unittest import result
 
 from string_calculator import StringCalculator
 
@@ -76,7 +77,10 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add("4,-5,-9,11,-10")
         self.assertEqual("negatives not allowed: [-5, -9, -10]",result)
 
-
+    def test_addition_bigger_than_1000(self):
+        result = calc.Add("2,1001")
+        self.assertEqual(2,result)
+        
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
 #     unittest.main()
