@@ -60,6 +60,10 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add("4,7,2, 6")
         self.assertEqual(4+7+2+6,result)
 
+    def test_addition_custom_delimiter(self):
+        result = calc.Add("//;\n1;2")
+        self.assertEqual(1+2,result)
+
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
 #     unittest.main()
