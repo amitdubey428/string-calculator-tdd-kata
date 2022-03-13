@@ -72,6 +72,10 @@ class TestStringCalculator(unittest.TestCase):
         result = calc.Add("//!4!-5!9")
         self.assertEqual("negatives not allowed: [-5]",result)
 
+    def test_addition_with_multiple_negatives(self):
+        result = calc.Add("4,-5,-9,11,-10")
+        self.assertEqual("negatives not allowed: [-5, -9, -10]",result)
+
 
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
