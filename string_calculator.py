@@ -13,7 +13,12 @@ class StringCalculator(object):
             numbers = re.split(delimiter_regex,numbers)
             numbers[:] = [x if x != "" else 0 for x in numbers] # Changes value of null strings to 0
             int_list = list(map(int,numbers))
+            negative_list = list(filter(lambda x:x<0,int_list))
+            if negative_list:
+                raise Exception("negatives not allowed: {neg_list}".format(neg_list=negative_list))
             return sum(int_list)
         except ValueError:
             return("Oops not a number!")
+        except Exception as e:
+            return str(e)
             
