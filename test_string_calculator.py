@@ -84,6 +84,10 @@ class TestStringCalculator(unittest.TestCase):
     def test_addition_long_delimiter(self):
         result = calc.Add("//[***]\n1***2***3")
         self.assertEqual(1+2+3,result)
+
+    def test_addition_multiple_delimiter(self):
+        result = calc.Add("//[*][%]\n1*2%3")
+        self.assertEqual(1+2+3,result)
         
 #We don't need this as we will be using nosetests
 # if __name__ == '__main__':
