@@ -11,7 +11,7 @@ class StringCalculator(object):
                 numbers = numbers[3:]
             delimiter_regex = default_delimiter+"|\n"
             numbers = re.split(delimiter_regex,numbers)
-            numbers[:] = [x if x != "" else 0 for x in numbers] # Changes value of null strings to 0
+            numbers[:] = [x if x != "" and int(x) <= 1000 else 0 for x in numbers] # Changes value of null strings and x>1000 to 0
             numbers = list(map(int,numbers))
             negative_list = list(filter(lambda x:x<0,numbers))
             if negative_list:
