@@ -3,6 +3,15 @@ import re
 
 class StringCalculator(object):
     def Add(self,numbers):
+        """
+        Add numbers from a string, seperated by delimiters
+
+        Args:
+            String: String containing single or multiple numbers seperated by delimiters
+
+        Returns:
+            Int: Sum of the numbers present in the string
+        """
         
         default_delimiter = ',|'
         long_delimiter_regex = re.compile("^//\[.*\]\\n")  # regex to check for long delimiter
